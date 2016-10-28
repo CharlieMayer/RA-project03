@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Aloha Shop</title>
+      <title>Lifestyle Electronics</title>
 
       <link rel="stylesheet" href="css/reset.css">
       <link rel="stylesheet" href="css/flickity.min.css" />
@@ -16,8 +16,8 @@
       <header class="site-header">
          <div class="site-header-inner container">
             <div class="logo">
-               <h1 class="screen-reader">Aloha</h1>
-               <img src="images/aloha-logo.svg" alt="Aloha Apparel Co. logo" />
+               <h1 class="screen-reader">Lifestyle Electronics</h1>
+               <img src="images/cart-icon.svg" alt="Lifestyle Electronics Logo" />
             </div>
             <div class="cart">
                <span class="screen-reader">Shopping Cart</span>
@@ -37,110 +37,99 @@
 
       <section class="banner">
          <div class="banner-text container">
-            <p class="collection">New Collection</p>
-            <p class="season">Spring/Summer 2016</p>
+            <p class="collection">Electronic Depot</p>
+            <p class="season">Top Tech Items Apple, Samsung, and more!</p>
          </div>
       </section>
 
       <main id="main" class="site-main" tabindex="-1">
          <section class="about" id="about">
             <div class="about-text container">
-               <h2>Hand-Crafted <span class="heavy">Styles</span></h2>
-               <p>Aloha Apparel Co. sells only the finest ready-to-travel clothing. Browse our current selection of products or sign-up for updates below.</p>
+               <h2>State-Of-The-Art <span class="heavy">Electronics</span></h2>
+               <p>Lifestyle Electronics carries the top brands and most cutting edge devices on the market. See and experience the future of electronics with us!</p>
             </div>
          </section>
 
          <section class="products" id="products">
             <div class="product-categories">
                <div class="category-wide mens">
-                  <span class="category-name"><a href="#">Men&apos;s</a></span>
+                  <span class="category-name"><a href="#">Laptops</a></span>
                </div>
                <div class="category-square trends">
-                  <span class="category-name"><a href="#">Trends</a></span>
+                  <span class="category-name"><a href="#">Televisions</a></span>
                </div>
                <div class="category-square glasses">
-                  <span class="category-name"><a href="#">Glasses</a></span>
+                  <span class="category-name"><a href="#">Speakers</a></span>
                </div>
                <div class="category-square sale">
-                  <span class="category-name"><a href="#">Sale</a></span>
+                  <span class="category-name"><a href="#">Tablets</a></span>
                </div>
                <div class="category-square bags">
-                  <span class="category-name"><a href="#">Bags</a></span>
+                  <span class="category-name"><a href="#">Desktops</a></span>
                </div>
                <div class="category-wide womens">
-                  <span class="category-name"><a href="#">Women&apos;s</a></span>
+                  <span class="category-name"><a href="#">Cellphones</a></span>
                </div>
             </div>
          </section>
 
          <section class="featured" id="featured">
             <div class="container">
-               <h2>Most-Loved <span class="heavy">Products</span></h2>
+               <h2>Must-Have  <span class="heavy">Products</span></h2>
                <div class="product-list">
-                  <div class="product-wrapper">
-                     <img src="images/stretch-knit-dress.jpg" alt="Image of stretch knit dress" />
-                     <p class="product-type">Dresses</p>
-                     <h3>Stretch Knit Dress</h3>
-                     <p class="price">$169.00</p>
-                     <button type="button" class="add-to-cart">Add to Cart</button>
+                 <div class="product-wrapper">
+                    <img src="http://img.bbystatic.com/BestBuy_US/images/products/4959/4959312_sa.jpg" alt="Image of Aspire Computer" height="250" width="250"/>
+                    <p class="product-type">Computer</p>
+                    <h3>Acer - Aspire 21.5\" Touch-Screen All-In-One - Intel Core i3 - 8GB Memory - 1TB Hard Drive - Black</h3>
+                    <p class="price">$609.99</p>
+                   <!-- Trigger/Open The Modal -->
+                   <button id="myBtn">Add To Cart</button>
+                     <button id="myBtn">View Cart</button>
+                   <!-- The Modal -->
+                   <div id="myModal" class="modal">
+
+                     <!-- Modal content -->
+                     <div class="modal-content">
+                       <span class="close">×</span>
+                       <p>Current Item in Cart</p>
+                     </div>
+
+                   </div>
+
+
+              </div>
+
+              <div class="product-wrapper">
+                 <img src="http://img.bbystatic.com/BestBuy_US/images/products/4959/4959306_sa.jpg" alt="Image of Aspire 8g" height="250" width="250" />
+                 <p class="product-type">Computer</p>
+                 <h3>Acer - Aspire Desktop - Intel Core i5 - 8GB Memory - 2TB Hard Drive - Black"</h3>
+                 <p class="price">$549.99</p>
+                <!-- Trigger/Open The Modal -->
+                <button id="myBtn">Add To Cart</button>
+                <button id="myBtn">View Cart</button>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <span class="close">×</span>
+                    <p>Current Item in Cart</p>
                   </div>
-                  <div class="product-wrapper">
-                     <img src="images/cotton-blue-shirt.jpg" alt="Image of cotton blue shirt" />
-                     <p class="product-type">Shirts</p>
-                     <h3>Cotton Blue Shirt</h3>
-                     <p class="price">$89.00</p>
-                     <button type="button" class="add-to-cart">Add to Cart</button>
-                  </div>
-                  <div class="product-wrapper">
-                     <img src="images/checked-stretch-dress.jpg" alt="Image of checked stretch dress" />
-                     <p class="product-type">Dresses</p>
-                     <h3>Checked Stretch Dress</h3>
-                     <p class="price">$129.00</p>
-                     <button type="button" class="add-to-cart">Add to Cart</button>
-                  </div>
-                  <div class="product-wrapper">
-                     <img src="images/blue-hipster-backpack.jpg" alt="Image of blue hipster backpack" />
-                     <p class="product-type">Bags</p>
-                     <h3>Blue Hipster Backpack</h3>
-                     <p class="price">$69.00</p>
-                     <button type="button" class="add-to-cart">Add to Cart</button>
-                  </div>
-                  <div class="product-wrapper">
-                     <img src="images/demin-overall-shorts.jpg" alt="Image of demin overall shorts" />
-                     <p class="product-type">Demin</p>
-                     <h3>Demin Overall Shorts</h3>
-                     <p class="price">$89.00</p>
-                     <button type="button" class="add-to-cart">Add to Cart</button>
-                  </div>
-                  <div class="product-wrapper">
-                     <img src="images/pink-dotted-dress.jpg" alt="Image of pink dotted dress" />
-                     <p class="product-type">Dresses</p>
-                     <h3>Pink Dotted Dress</h3>
-                     <p class="price">$99.00</p>
-                     <button type="button" class="add-to-cart">Add to Cart</button>
-                  </div>
-                  <div class="product-wrapper">
-                     <img src="images/blue-silk-dress.jpg" alt="Image of blue silk dress" />
-                     <p class="product-type">Dresses</p>
-                     <h3>Blue Silk Dress</h3>
-                     <p class="price">$119.00</p>
-                     <button type="button" class="add-to-cart">Add to Cart</button>
-                  </div>
-                  <div class="product-wrapper">
-                     <img src="images/cotton-yellow-tshirt.jpg" alt="Image of cotton yellow tshirt" />
-                     <p class="product-type">Shirts</p>
-                     <h3>Cotton Yellow Tshirt</h3>
-                     <p class="price">$39.00</p>
-                     <button type="button" class="add-to-cart">Add to Cart</button>
-                  </div>
-               </div>
+
+                </div>
+
+
+           </div>
+           </div>
+
             </div>
          </section>
 
          <section class="newsletter" id="newsletter">
             <div class="sign-up-wrapper container">
                <h2>Sign-up for <span class="heavy">Updates</span></h2>
-               <p>Stay updated on our latest product releases, be first to find out about upcoming sales, and get free style tips from our blog. Unsubscribe at any time.</p>
+               <p>Stay updated on our awesome deals and get tips on how to use the newest cameras and mobile devices. Unsubscribe at any time.</p>
 
                <form class="sign-up-form">
                   <input type="email" name="your_email" id="your-email" value="" placeholder="Your Email">
@@ -154,17 +143,17 @@
          <div class="container">
             <div class="colophon">
                <div class="copyright">
-                  <p>&copy; 2016 Aloha Apparel Co.</p>
+                  <p>&copy; Lifestyle Electronics</p>
                   <p>Powered by HTML and CSS.</p>
                </div>
 
                <div class="contact">
-                  <p>604-604-6040. <a href="mailto:info@alohaapparel.com">info@alohaapparel.com</a></p>
+                  <p>786-222-4485. <a href="mailto:info@alohaapparel.com">info@alohaapparel.com</a></p>
                </div>
 
                <div class="address">
-                  <p>1490 W Broadway</p>
-                  <p>Vancouver, BC, Canada</p>
+                 <p>60 Haverhill Road</p>
+                 <p>Trumbull, CT, 06611</p>
                </div>
             </div>
 

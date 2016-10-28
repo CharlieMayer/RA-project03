@@ -1,8 +1,4 @@
 
-
-
-
-
 /* Extra Resetting */
 /*-----------------------------------------*/
 
@@ -159,7 +155,7 @@ input,
 select,
 textarea {
   color: #2d2d2d;
-  font-family: 'Raleway Web', sans-serif;
+  font-family: 'Electrolize', sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: normal;
@@ -167,7 +163,7 @@ textarea {
 }
 
 h1, h2, h3 {
-   font-family: 'Playfair Display Web', serif;
+   font-family: 'Share Tech Mono', monospace;
    line-height: 1;
 }
 
