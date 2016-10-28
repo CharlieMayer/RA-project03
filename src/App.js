@@ -1,4 +1,4 @@
-import ShoppingCart from 'ShoppingCart.js';
+import ShoppingCart from 'ShoppingCart';
 import BBProductAPIService from './BBProductAPIService';
 import BBProductData from '.model/BBProductData';
 import Catalog from './Catalog';
