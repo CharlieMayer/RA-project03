@@ -1,3 +1,9 @@
+module: {
+loaders: [
+{ test: /.js$/, exclude: /node_modules/, loader: 'babel?presets[]=es2015' }
+]}
+
+
 /**
  * Created by Edward_J_Apostol on 2016-08-29.
  */
