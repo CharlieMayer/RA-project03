@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
       $.ajax({
-        url: "http://api.remix.bestbuy.com/v1/products((categoryPath.id=abcat0501000))?apiKey=8ccddf4rtjz5k5btqam84qak&format=json&show=image,name,regularPrice,salePrice,sku",
+        url: "https://api.remix.bestbuy.com/v1/products((categoryPath.id=abcat0501000))?apiKey=8ccddf4rtjz5k5btqam84qak&format=json&show=image,name,regularPrice,salePrice,sku",
          method: 'GET',
         }).done(function(data) {
 
