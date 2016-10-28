@@ -28,7 +28,7 @@ const webpack = require('webpack');
 const PATHS = {
     src: join(__dirname, 'src'),
     fonts: join(__dirname, 'fonts'),
-    build: join(__dirname, 'build')
+    build: 'build',
 };
 
 // Thus the PATHS constant above can help refer to your folders.
@@ -58,7 +58,7 @@ module.exports = {
     },
     output: {
         path: process.cwd(),
-        publicPath: '/yourProjectName/',
+        publicPath: '/aloha-apparel-pt2/',
         filename: join(PATHS.build,'bundle.js')
     },
     module: {
@@ -110,4 +110,3 @@ module.exports = {
 // the "HotModuleReplacementPlugin()" is a plugin for webpack that
 // performs the task.
 // the tech info is at - https://webpack.github.io/docs/hot-module-replacement.html
-
