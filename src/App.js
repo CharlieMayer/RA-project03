@@ -196,93 +196,13 @@ createTableOfItems(products){
 
         }
       }
-      addItemToCart(item,qty=0){
-       console.log(`addItemToCart(): item is = ` + item + ` quantity is = ` + qty);
-       if (this.ss == null ){ return };
-       if( qty<=0 ) { return; }
-       if(item==null || typeof (item)=='undefined') { return; }
+      prepareItemToAddToCart(e){
+        let skuNum = $(e.target).attr('data-sku');
+        console.log(skuNum);
+        console.log(this);
+        console.log(this.parentNode);
+       this.shoppingCart.addItemToCart(skuNum,1);
 
-       // check to see if the item in the cart already exists
-       // console.log('this.ss = ' + this.ss);
-       // loop through all the items currently in session storage
-       console.log('the # of items in session storage is ' + this.ss.length);
-       let numberOfItemsInCart = this.ss.length;
-
-       // case: we're the 1st product ever!
-       if (numberOfItemsInCart == 0){
-           // simply add the new item and quantity;
-           this.ss.setItem( item.toString() ,qty.toString() );
-           return;
-       } else {
-           // case: there is more than one product / sku
-           // loop through all the 'keys' in session storage
-           let numMatches = 0;
-           for (let theKey in this.ss){
-               // check to see if the key matches the sku
-               console.log('theKey = ' + theKey);
-               if ( theKey == item.toString() ){
-                   console.log('found a matching key.')
-                   // if it does, update the quantity value by qty
-                   let newValue = (parseInt( this.ss.getItem(theKey) ) + parseInt (qty)).toString();
-                   this.ss.setItem(theKey, newValue  );
-                   numMatches =1;
-               } else {
-                   console.log('no match');
-               }
-
-           }
-           // if we did not find a match after going looping through the keys
-           if (numMatches==0){
-               // add the new key / value pair
-               this.ss.setItem(item.toString(),qty);
-           }
-       }
-
-       // console.log the session storage to see what is happening.
-       console.log('the results of the cart so far...');
-       for (let newKey in this.ss){
-           console.log('key/sku = ' + newKey + ' quantity = ' + this.ss.getItem(newKey));
-
-       }
-
-
-
-   }
-
-
-
-
-
-      prepareItemToAddToCart(evt,context){
-
-          // we receive an event object that contains the information about the object
-          // that generated the target
-          if(evt==null || typeof (evt) === 'undefined'){
-              return;
-          }
-          let targetSKU = evt.target.getAttribute('data-sku');
-          // let targetSKU = $(evt.target).attr('data-sku')
-
-          // update modal with content.
-          // console.log( document.getElementsByClassName('modal-content') );
-          let productAdded = this.getProductBySku(targetSKU);
-          $('#content').last().html('<b>'+ productAdded.name +'</b><br>has been added to the cart.<br>');
-
-          context.shoppingCart.addItemToCart(targetSKU,1);
-      }
-
-   getProductBySku(sku=0){
-          if (sku==0){ return; };
-          //console.log(this.products);
-          let criteriaFn = function(product){
-              return product['sku'] == sku;
-          };
-          let result = this.products.filter(criteriaFn);
-          // result is an array of potential products.
-          // but one product should be returned only.
-          // so return the first element;
-          return result[0];
-      }
      }
 
      prepareDeleteItemFromCart(evt,context){
