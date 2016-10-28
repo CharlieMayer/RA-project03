@@ -215,25 +215,5 @@ console.log(targetSKU,context);
 context.shoppingCart.deleteItemFromCart(targetSKU,1);
 
 }
-// add event listeners to all the delete buttons to make them respond
-       for (let delBtnCount = 0; delBtnCount < products.length; delBtnCount++){
-               let currentItem = products[delBtnCount];
-               let currentSku = currentItem['sku'];
-               let deleteSku = 'delete-' + currentSku;
-               console.log('creating click events for delete button -');
-               console.log('deleteSku = ' + deleteSku);
-               let currentObject = "#"+ deleteSku; // #delete-32421
-               // the variable below assumes that in App.js you have a function called
-               // 'prepareDeleteItemFromCart' that's like addItemToCart
-               let context =  this;
-               $(currentObject).on('click',null,{context:context},function(event){
-                   // console.log(event);
-                   // console.log(event.target);
-                   // console.log(event.data);
-                   // console.log(event.data.callBack);
-                   event.data.context.prepareDeleteItemFromCart(event,event.data.context);
-               });
-
-       }
 
       }
